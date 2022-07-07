@@ -1,4 +1,4 @@
-# action.yml
+# Docker Action
 name: 'Docker Build Environment'
 description: 'Spin up docker build environment'
 inputs: # Pass additional inputs to a build e.g. environment variables for build
