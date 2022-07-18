@@ -20,7 +20,9 @@ jobs:
     steps:
       - name: ENV Setup / Build
         id: Setup
-        uses: Dockerfile
+        uses: runtimeverification/devops-actions@v1
+        with: 
+          entrypoint: '/bin/bash'
 
       - name: Checkout
         uses: actions/checkout@v3
