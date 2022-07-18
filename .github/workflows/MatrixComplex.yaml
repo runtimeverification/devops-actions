@@ -1,0 +1,16 @@
+name: Matrix Complexity Test
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  MyJob: 
+    runs-on: ${{ matrix.os }} 
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [[self-hosted, linux], [self-hosted, macos, x64]]
+    steps:
+      - run: 'echo "Matrix OS: ${{ matrix.os }}"'
+      - name: Build environment information
+        run: echo $HOSTNAME 

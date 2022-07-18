@@ -1,0 +1,23 @@
+name: 'Build And Test'
+
+on: 
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - master
+concurrency:
+  # Latest code is always prioritized to run per workflow per branch. 
+  #   If a new push comes in on a branch, a already running workflow it is canceled and latest code runs.
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: [self-hosted, linux]
+    # Action to use Dockerfile Setup fron runtimeverification/devops-actions
+    steps:
+      - name: Build 
+
+      - name: Run Tests
+
+      - name: Publish Report? Or Data for Download 
