@@ -4,7 +4,7 @@ description: 'Spin up docker build environment'
 inputs: # Pass additional inputs to a build e.g. environment variables for build
   entrypoint:  # variable name referenced by input.commands
     description: 'Tell docker what to run in the dockerfile'
-    required: true
+    required: false
 runs:
   # Run in docker using custom actions definition 
   # Definitions here will override anything defined in the Dockerfile with the same name e.g. ENTRYPOINT/VOLUME
