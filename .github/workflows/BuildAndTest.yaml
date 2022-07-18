@@ -30,5 +30,3 @@ jobs:
           submodules: recursive
       - name: Run Tests
         run: cat /VERSION
-
-      - name: Publish Report? Or Data for Download 
