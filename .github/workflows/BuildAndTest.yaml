@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: ENV Setup / Build
         id: Setup
-        uses: runtimeverification/devops-actions@v1
+        uses: runtimeverification/devops-actions@v0
         with: 
           entrypoint: '/bin/bash'
 
